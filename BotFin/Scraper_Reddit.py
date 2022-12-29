@@ -7,6 +7,6 @@ reddit = praw.Reddit(
     user_agent=keys.user_agent,
 )
 
-hot_posts = reddit.subreddit('CryptoCurrency').hot(limit=10)
-for post in hot_posts:
-    print(post.title)
+def top_posts():
+    return reddit.subreddit('CryptoCurrency').hot(limit=10)
+

@@ -146,23 +146,6 @@ test = ["contextlib2", "coverage[toml] (>=4.5)", "hypothesis (>=4.0)", "mock (>=
 trio = ["trio (>=0.16,<0.22)"]
 
 [[package]]
-name = "arsenic"
-version = "21.8"
-description = "Asynchronous WebDriver client"
-category = "main"
-optional = false
-python-versions = ">=3.7,<4.0"
-files = [
-    {file = "arsenic-21.8-py3-none-any.whl", hash = "sha256:9be9d9eeeac519d45bf8ebe6d03c24eb6ae4dc7672b1f6c8f870f63f5997642b"},
-    {file = "arsenic-21.8.tar.gz", hash = "sha256:1ac2d29ff447b648f870ce241660d0584d847f07f8fd6f00117e8aba0594e927"},
-]
-
-[package.dependencies]
-aiohttp = ">=3"
-attrs = ">=17.4.0"
-structlog = ">=20.1.0,<21.0.0"
-
-[[package]]
 name = "async-generator"
 version = "1.10"
 description = "Async generators and context managers for Python 3.5+"
@@ -1187,23 +1170,6 @@ files = [
 ]
 
 [[package]]
-name = "structlog"
-version = "20.2.0"
-description = "Structured Logging for Python"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-files = [
-    {file = "structlog-20.2.0-py2.py3-none-any.whl", hash = "sha256:33dd6bd5f49355e52c1c61bb6a4f20d0b48ce0328cc4a45fe872d38b97a05ccd"},
-    {file = "structlog-20.2.0.tar.gz", hash = "sha256:af79dfa547d104af8d60f86eac12fb54825f54a46bc998e4504ef66177103174"},
-]
-
-[package.extras]
-dev = ["coverage[toml]", "freezegun (>=0.2.8)", "furo", "pre-commit", "pretend", "pytest (>=6.0)", "pytest-asyncio", "pytest-randomly", "simplejson", "sphinx", "sphinx-toolbox", "twisted"]
-docs = ["furo", "sphinx", "sphinx-toolbox", "twisted"]
-tests = ["coverage[toml]", "freezegun (>=0.2.8)", "pretend", "pytest (>=6.0)", "pytest-asyncio", "pytest-randomly", "simplejson"]
-
-[[package]]
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
@@ -1641,4 +1607,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11.1"
-content-hash = "6d9d43ec5fefe53fa4f82060842594d2b38ad26b4b00ad19b7dc4d6789affec6"
+content-hash = "edffbe661249895884f22fa41fcf920e26f710924d645e890257c1205c12ef19"
