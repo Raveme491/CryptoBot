@@ -8,7 +8,11 @@ from webdriver_manager.firefox import GeckoDriverManager
 
 options = Options()
 options.add_argument('--headless')
-# driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+# driver = webdriver.Firefox(
+#     service=FirefoxService(GeckoDriverManager().install())
+# )
+
+# assert 0
 
 
 class Raspador:
