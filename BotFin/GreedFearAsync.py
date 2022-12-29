@@ -2,10 +2,8 @@ from datetime import datetime
 
 from httpx import AsyncClient
 
-url = 'https://api.alternative.me/fng/'
-
-
 async def fear():
+    url = 'https://api.alternative.me/fng/'
     async with AsyncClient() as client:
         html = await client.get(url)
     timestamp_string = int(html.json()['data'][0]['timestamp'])

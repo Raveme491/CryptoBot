@@ -133,7 +133,7 @@ env.bak/
 venv.bak/
 
 #Keys
-.keys.py
+./BotFin/keys.py
 
 # Spyder project settings
 .spyderproject
