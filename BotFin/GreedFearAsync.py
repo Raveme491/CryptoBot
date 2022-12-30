@@ -10,8 +10,7 @@ async def fear():
     datetime_object = datetime.fromtimestamp(timestamp_string)
     GreedFear = {
         'value': html.json()['data'][0]['value'],
-        'value_classification': html.json()['data'][0]['value_classification'],
-        'data': datetime_object,
+        'data': datetime_object.strftime('%d/%m/%Y'),
     }
     return GreedFear
 

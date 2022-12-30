@@ -12,6 +12,7 @@ python-binance = "^1.0.16"
 praw = "^7.6.1"
 selenium = "^4.7.2"
 webdriver-manager = "^3.8.5"
+pymongo = "^4.3.3"
 
 
 [tool.poetry.group.dev.dependencies]

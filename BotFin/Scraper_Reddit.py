@@ -8,5 +8,4 @@ reddit = praw.Reddit(
 )
 
 def top_posts():
-    return reddit.subreddit('CryptoCurrency').hot(limit=10)
-
+    return [i.title for i in reddit.subreddit('CryptoCurrency').hot(limit=10)]
