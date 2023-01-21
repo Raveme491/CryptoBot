@@ -28,7 +28,6 @@ if __name__ == '__main__':
         "GreedFear": greed_fear_datas["value"],
         "CoinT_titles": Scraper_Async.titles_page(titles),
         "reddit_posts": posts,
-        "Eth_data": values_eth
+        "Eth_data": values_eth[1:6]
     }
     db.datas.insert_one(values)
-

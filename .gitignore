@@ -134,6 +134,9 @@ venv.bak/
 
 #Keys
 keys.py
+CryptoData.csv
+BotFin/PyDb.py
+BotFin/CryptoCollector.py
 
 # Spyder project settings
 .spyderproject
