@@ -2,6 +2,7 @@ from datetime import datetime
 
 from httpx import AsyncClient
 
+
 async def fear():
     url = 'https://api.alternative.me/fng/'
     async with AsyncClient() as client:
