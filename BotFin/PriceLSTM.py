@@ -29,7 +29,8 @@ class ModelLstm(nn.Module):
         return o
 
 
-net = ModelLstm(input_size=4, num_hidden=128, num_layers=2)
-lossfun = nn.MSELoss()
-optimizer = torch.optim.AdamW(net.parameters(), lr=0.01)
-net.load_state_dict(torch.load(r'BotFin/trainedModel.pt'))
+def model_t():
+    net = ModelLstm(input_size=4, num_hidden=128, num_layers=2)
+    net.load_state_dict(torch.load(r'BotFin/ModelLSTM.pt'))
+
+    return net

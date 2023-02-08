@@ -1,29 +1,27 @@
 import re
-from time import sleep
 
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.service import Service as FirefoxService
-from webdriver_manager.firefox import GeckoDriverManager
+
 
 options = Options()
 options.add_argument('--headless')
-# driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 
 
-def Scraper():
+def scraper():
     url = r'https://cointelegraph.com/'
     navegador = webdriver.Firefox(options=options)
     navegador.get(url)
-    html = navegador.page_source
+    html_in = navegador.page_source
     navegador.quit()
-    return html
+    return html_in
 
 
 def titles_page(code_html: str) -> list[str]:
-    title_re = re.compile(r'(?<=("post-card__title">))(.*?)(?=\s<\/span>)')
+    title_re = re.compile(r'(?<=("post-card__title">))(.*?)(?=\s</span>)')
     return [i.group(0) for i in title_re.finditer(str(code_html))]
 
 
 if __name__ == '__main__':
-    print('Tudo OK')
+    html = scraper()
+    print(titles_page(html))

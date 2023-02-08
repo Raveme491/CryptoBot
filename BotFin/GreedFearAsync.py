@@ -9,11 +9,11 @@ async def fear():
         html = await client.get(url)
     timestamp_string = int(html.json()['data'][0]['timestamp'])
     datetime_object = datetime.fromtimestamp(timestamp_string)
-    GreedFear = {
+    greed_fear = {
         'value': html.json()['data'][0]['value'],
         'data': datetime_object.strftime('%d/%m/%Y'),
     }
-    return GreedFear
+    return greed_fear
 
 
 if __name__ == '__main__':

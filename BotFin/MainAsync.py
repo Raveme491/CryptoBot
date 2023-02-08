@@ -1,6 +1,4 @@
 import asyncio
-import time
-
 import CryptoAsync
 import GreedFearAsync
 import pymongo
@@ -10,11 +8,11 @@ import Scraper_Reddit
 
 async def async_funcs():
     try:
-        async with asyncio.timeout(45):
+        async with asyncio.timeout(60):
             return await asyncio.gather(
-                CryptoAsync.bin(),
+                CryptoAsync.crypto_data(),
                 GreedFearAsync.fear(),
-                asyncio.to_thread(Scraper_Async.Scraper),
+                asyncio.to_thread(Scraper_Async.scraper),
                 asyncio.to_thread(Scraper_Reddit.top_posts),
             )
     except TimeoutError:
